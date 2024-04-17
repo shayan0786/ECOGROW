@@ -1,0 +1,43 @@
+/* processing-styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.processing-status {
+    background-color: rgba(9, 9, 243, 0.432);
+    border-radius: 30%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: black;
+}
+
+p {
+    color: black;
+}
+
+#timer {
+    margin-top: 20px;
+    font-size: 18px;
+    color: red;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 2px;
+    margin-left: 4px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

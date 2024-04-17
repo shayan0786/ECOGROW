@@ -1,0 +1,475 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,400;1,500&display=swap");
+
+
+:root {
+  --main: rgb(9, 223, 9);
+  --box_shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Besley", serif;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  transition: 0.3s ease-in-out;
+}
+*::selection {
+  background: var(--main);
+  color: #000;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+.btn {
+  background: #000;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 1.5rem;
+}
+.btn:hover {
+  letter-spacing: 1px;
+}
+
+section {
+  padding: 5rem 10%;
+}
+.Heading {
+  text-align: center;
+  font-size: 3.2rem !important;
+  margin: 1rem 0;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--main);
+}
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 10%;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  z-index: 100000;
+  box-shadow: var(--box_shadow);
+}
+header .logo {
+  font-size: 2.5rem;
+  color: #000;
+  font-weight: 600;
+}
+header .logo span {
+  color: var(--main);
+}
+header .navbar a {
+  font-size: 2rem;
+  margin: 0 1rem;
+  color: #000;
+}
+header .navbar a:hover {
+  color: var(--main);
+  text-decoration: underline;
+}
+header .Icons a {
+  font-size: 2rem;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  color: #000;
+  background: #ccc;
+  text-align: center;
+  margin-left: 0.2rem;
+}
+header .Icons a:hover {
+  background: var(--main);
+  color: #fff;
+}
+header #MenuBtn {
+  display: none;
+}
+@keyframes Form {
+  0% {
+    top: 50%;
+    opacity: 0;
+  }
+}
+.Home {
+  padding: 0;
+}
+.Home .Slide {
+  position: relative;
+  height: 70rem;
+  display: flex;
+  align-items: center;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.Home .Slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(120deg, #f9f4f4, transparent);
+}
+.Home .HomeContent {
+  position: relative;
+  width: 50rem;
+}
+.Home .HomeContent h3 {
+  font-size: 6rem;
+}
+.Home .HomeContent p {
+  font-size: 1.4rem;
+  line-height: 2;
+  padding: 1rem 0;
+}
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+}
+.about .row .Video {
+  flex: 1 1 40rem;
+}
+.about .row .Video video {
+  width: 100%;
+  box-shadow: var(--box_shadow);
+  cursor: pointer;
+}
+.about .row .AboutMainContent {
+  flex: 1 1 40rem;
+  box-shadow: var(--box_shadow);
+  padding: 1rem;
+}
+.about .row .AboutMainContent h4 {
+  font-size: 3.7rem;
+  font-weight: 700;
+}
+.about .row .AboutMainContent p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  padding: 1rem 0;
+}
+
+.RecentEvent .boxContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+.RecentEvent .boxContainer .box {
+  padding: 3rem;
+  text-align: center;
+  box-shadow: var(--box_shadow);
+  border: 1px solid #000;
+  cursor: pointer;
+}
+.RecentEvent .boxContainer .box:hover {
+  transform: scale(1.05);
+}
+.RecentEvent .boxContainer .box img {
+  
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 0.8rem;
+}
+.RecentEvent .boxContainer .box h4 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  text-align: left;
+}
+.RecentEvent .boxContainer .box p {
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.review .Slide {
+  padding: 1rem;
+  box-shadow: var(--box_shadow);
+}
+.review .Slide p {
+  padding: 1.5rem;
+  position: relative;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  color: #3b3b3b;
+  line-height: 1.5;
+}
+.review .Slide .UserDetails {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.review .Slide .UserDetails img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+}
+.review .Slide .UserDetails h4 {
+  font-size: 2rem;
+}
+.review .Slide .UserDetails .Stars {
+  padding-top: 0.5rem;
+}
+.review .Slide .UserDetails .Stars i {
+  font-size: 1.4rem;
+  color: var(--main);
+}
+
+.Blog .Slide {
+  text-align: center;
+}
+.Blog .Slide .Img {
+  overflow: hidden;
+  height: 26rem;
+  margin: 0 auto;
+  margin-bottom: -3rem;
+}
+.Blog .Slide .Img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.Blog .Slide .BlogContent {
+  padding: 2rem;
+  padding-top: 4.8rem;
+  box-shadow: var(--box_shadow);
+  border-bottom: 0.3rem solid #000;
+}
+.Blog .Slide .BlogContent h4 {
+  font-size: 2rem;
+}
+.Blog .Slide .BlogContent p {
+  text-align: left;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+
+
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.contact .row .ContactMap {
+  flex: 1 1 40rem;
+  width: 100%;
+}
+.contact form {
+  flex: 1 1 40rem;
+  padding: 2rem;
+}
+.contact form h4 {
+  font-size: 2.8rem;
+}
+.contact form .box {
+  width: 100%;
+  padding: 1.5rem 0;
+  margin: 0.5rem 0;
+  border-bottom: 1px solid #000;
+  font-size: 1.4rem;
+}
+.contact form textarea {
+  resize: none;
+  height: 15rem;
+}
+
+footer {
+  background: var(--main);
+  text-align: center;
+  padding: 1rem;
+}
+footer a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.ThemeToggle {
+  position: fixed;
+  top: 10rem;
+  right: -20rem;
+  background: #000;
+  z-index: 10000;
+  width: 20rem;
+  text-align: center;
+}
+.ThemeToggle.active {
+  right: 0;
+}
+.ThemeToggle h4 {
+  font-size: 2rem;
+  padding: 1rem 0;
+  color: #fff;
+}
+.ThemeToggle .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.ThemeToggle .buttons .theme-btn {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.ThemeToggle .ToggleBtn {
+  position: absolute;
+  top: 0;
+  left: -5.9rem;
+  padding: 1.3rem 1.5rem;
+  background: #000;
+  cursor: pointer;
+}
+.ThemeToggle .ToggleBtn i {
+  font-size: 3rem;
+  color: #fff;
+  animation: spinner 0.9s linear infinite;
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  header {
+    padding: 1.5rem 2rem;
+  }
+  section {
+    padding: 3rem 5%;
+  }
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  header #MenuBtn {
+    display: initial;
+  }
+  header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  header .navbar a {
+    margin: 2rem;
+    box-shadow: var(--box_shadow);
+    display: block;
+    padding: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  header .SearchForm {
+    width: 85%;
+  }
+  header .LoginForm {
+    width: 85%;
+  }
+  
+  .Home .Slide {
+    justify-content: center;
+  }
+  .Home .Slide .HomeContent {
+    text-align: center;
+  }
+  .Home .Slide .HomeContent h3 {
+    font-size: 2.9rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+.navbar {
+    background-color: BLACK;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: rgb(9, 223, 9);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    color: rgb(9, 223, 9);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+.logo {
+  display: flex;
+  align-items: center; /* Aligns logo and text vertically */
+}
+
+.logo-img {
+  width: 120px; /* Adjust width as needed */
+  height: auto; /* Maintains aspect ratio */
+  margin-right: 10px; /* Adjust spacing between logo and text */
+}
+.logo {
+  width: 200px;
+  height: 100px;
+  opacity: 0; /* Initially hide the logo */
+  animation: logoTransition 1s ease forwards; /* Apply the animation */
+}
+
+@keyframes logoTransition {
+  from {
+      opacity: 0;
+      transform: scale(0.5); /* Optional: Start with a smaller size */
+  }
+  to {
+      opacity: 1;
+      transform: scale(1); /* Optional: End with original size */
+  }
+}

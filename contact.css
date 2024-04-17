@@ -1,0 +1,193 @@
+
+body{
+    text-align: center;
+    align-items: center;
+}
+header {
+    background-color: rgba(41, 51, 92, 0.6);
+  
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+}
+.logo img {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    height: 150px;
+    border-radius: 50%;
+}
+nav li {
+    display: inline;
+    margin: 10px;
+}
+nav a {
+    text-decoration: none;
+    color: #F3A717;
+    font-weight: bold;
+    font-size: 30px;
+}
+.logo img:hover{
+    scale: 1.05;
+}
+nav a:hover{
+    color: #BEF0FF;
+    text-decoration: underline;
+    transition: all ease 1.5;
+}
+
+#mainbox{
+    background-color: aliceblue;
+    padding: 15px;
+    padding: 5px 5px 20px 5px;
+    margin: 20px 1px 5px 1px;
+    border-radius: 40px;
+}
+#title-head{
+    background-image: linear-gradient(to right, rgba(228,87,46,0.6), rgba(243, 167, 18,0.8));
+    padding: 5px;
+    border-radius: 100px;
+    border-color: azure;
+    border-style: solid;
+    margin: 5px;
+    color: aliceblue;
+}
+
+#title-head h1{
+    font-size: 250%;
+    margin: 0px;
+}
+
+#title-head p{
+    font-size: 150%;
+    margin: 5px;
+    font-style: italic;
+    text-align: center;
+}
+#feedback{
+    box-shadow: 0px 0px 20px rgba(102, 155, 188, 1);
+    margin: 7px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+label{
+    display: inline-block;
+    margin-top: 20px;
+}
+input, select, textarea{
+    background-color: rgba(102, 155, 188, 0.1);
+    border-style: solid;
+    border-radius: 5px;
+    height: 27px;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+fieldset{
+    border: 0.5px dotted rgba(102, 155, 188, 1);
+    padding: 5px;
+    margin:10%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+textarea{
+    height: 80px;
+    position: relative;
+}
+button{
+    background-color: rgba(41, 51, 92, 1);
+    font-size: 30px;
+    color: aliceblue;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    /* margin: 10px 0px 0px 0px; */
+    transition: all ease 0.4s;
+    text-align: center;
+    cursor: pointer;
+}
+#comment label{
+    vertical-align: top;
+}
+textarea:focus, input:focus, select:focus{
+    background-color: rgba(102, 155, 188, 0.3);
+}
+button:hover{
+    scale: 1.1;
+}
+.navbar {
+    background-color: BLACK;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: rgb(9, 223, 9);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    color: rgb(9, 223, 9);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+.logo {
+  display: flex;
+  align-items: center; /* Aligns logo and text vertically */
+}
+
+.logo-img {
+  width: 150px; /* Adjust width as needed */
+  height: auto; /* Maintains aspect ratio */
+  margin-right: 10px; /* Adjust spacing between logo and text */
+}
+
+::selection {
+    background-color: white;
+    color: green;
+    font-weight: bolder; 
+}.logo {
+    width: 200px;
+    height: 100px;
+    opacity: 0; /* Initially hide the logo */
+    animation: logoTransition 1s ease forwards; /* Apply the animation */
+  }
+  
+  @keyframes logoTransition {
+    from {
+        opacity: 0;
+        transform: scale(0.5); /* Optional: Start with a smaller size */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Optional: End with original size */
+    }
+}
+
+::selection {
+    background-color: green;
+    color: white;
+    font-weight: bolder; 
+}

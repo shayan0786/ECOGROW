@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Registration</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    /* Green scrollbar */
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #4CAF50;
+    }
+
+    /* Logo transition */
+    #logo {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    #logo.loaded {
+        opacity: 1;
+    }
+    .logo {
+        display: flex;
+        align-items: center; 
+      }
+      
+      .logo-img {
+        width: 70px; 
+        height: auto; 
+        margin-right: 10px; 
+}
+.navbar {
+        background-color: BLACK;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        color: rgb(9, 223, 9);
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    .nav-links {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin-right: 20px;
+    }
+    
+    .nav-links li a {
+        color: rgb(9, 223, 9);
+        text-decoration: none;
+        font-size: 18px;
+    }
+    
+    .nav-links li a:hover {
+        text-decoration: underline;
+    }
+    ::selection {
+        background-color: GREEN;
+        color: black;
+        font-weight: bolder; 
+    }
+    
+</style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img src="/ECOGROWLOGO (2).jpg" alt="ECO Grow Logo" class="logo-img">
+            ECO Grow
+        </a>
+        
+        
+        <!-- <a href="#" class="logo">ECO Grow</a> -->
+        <ul class="nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/register.html">Registration</a></li>
+            <li><a href="/forevent.html">For Events</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+<div class="container">
+    <div id="logo">
+        <img src="/ECOGROWLOGO (2).jpg" alt="Logo" width="200">
+            <img src="/ECOGROWLOGO (2).jpg" alt="Logo" width="200">
+    </div>
+    <h2>Event Registration Form</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="whatno">What No:</label>
+        <input type="text" id="whatno" name="whatno" required>
+
+        <label for="mobile">Mobile No:</label>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="event">Select Event:</label>
+        <select id="event" name="event" required>
+            <option value="">Select an event</option>
+            <option value="event1">Campus Clean-up Day</option>
+            <option value="event2">Tree Plantation Drive</option>
+        </select>
+
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+<script>
+    // Function to validate the form
+    function validateForm() {
+        var form = document.getElementById("registrationForm");
+        var name = form["name"].value;
+        var address = form["address"].value;
+        var whatno = form["whatno"].value;
+        var mobile = form["mobile"].value;
+        var email = form["email"].value;
+        var event = form["event"].value;
+
+        if (name === "" || address === "" || whatno === "" || mobile === "" || email === "" || event === "") {
+            alert("Please fill in all fields.");
+            return false;
+        }
+
+        confirm("Are you sure you want to register for this event?");
+    }
+
+    // Logo transition effect
+    window.onload = function() {
+        document.getElementById("logo").classList.add("loaded");
+    };
+</script>
+</body>
+</html>

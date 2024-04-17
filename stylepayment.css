@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,400;1,500&display=swap");
+
+
+:root {
+--main: rgb(9, 223, 9);
+--box_shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    color:rgb(9, 223, 9) ;
+}
+
+#navbar{
+    background-color: #0f1111;
+    height: 60px;
+    position: relative;
+}
+#logo{
+    color: rgb(9, 223, 9);
+    font-size: 25px;
+}
+
+a{
+    margin-right: 200px;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 50px;
+    font-family: cursive;
+    margin-top: 50px;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.payment-option {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.payment-option span {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.payment-option button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+span{
+    color: black;
+    font-weight: bold;
+}
+

@@ -1,0 +1,23 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payment Page</title>
+    <link rel="stylesheet" href="styleupi.css">
+</head>
+<body>
+
+<div class="payment-form">
+    <h1 style="text-align:center;font-family:cursive;font-weight:bolder;">Upi Payments Details</h1>
+    <hr style="border: 3px solid black;">
+    <br>
+    <label for="upiId">UPI ID:</label>
+    <input type="text" id="upiId" placeholder="Enter UPI ID">
+    <a href="/process.html"><button onclick="initiatePayment()">Initiate UPI Payment</button></a>
+</div>
+
+<script src="scriptupi.js"></script>
+</body>
+</html>
